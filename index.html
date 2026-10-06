@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRJ Jewellery — Timeless. Personal. Yours.</title>
+<meta name="description" content="SRJ Jewellery — premium Indian gold and diamond jewellery for every precious occasion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#211b18; --muted:#746a63; --cream:#fbf7f1; --paper:#fffdf9;
+  --gold:#b58a43; --gold2:#d9b66c; --line:#e9dfd2; --rose:#f5ebe7;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+.topbar{background:#241b17;color:#fff7ec;text-align:center;padding:9px;font-size:12px;letter-spacing:.08em}
+nav{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:#fffdf9;position:sticky;top:0;z-index:20}
+.logo{font-family:"Cormorant Garamond",serif;font-size:35px;font-weight:700;letter-spacing:.12em}
+.logo span{display:block;font-family:Inter;font-size:9px;letter-spacing:.36em;text-align:center;margin-top:-7px;color:var(--gold)}
+.navlinks{display:flex;gap:27px;font-size:13px;color:#413933}
+.navlinks a:hover{color:var(--gold)}
+.navicons{display:flex;gap:14px}.icon{border:0;background:none;font-size:20px;cursor:pointer}
+.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;background:var(--cream)}
+.hero-copy{padding:85px max(5vw,40px);display:flex;flex-direction:column;justify-content:center}
+.kicker{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(54px,6.3vw,88px);line-height:.9;font-weight:600;margin:20px 0}
+.hero p{max-width:520px;color:var(--muted);line-height:1.8;font-size:15px}
+.btn{display:inline-flex;width:max-content;padding:14px 24px;background:var(--ink);color:white;font-size:12px;letter-spacing:.13em;text-transform:uppercase;margin-top:20px}
+.btn.light{background:white;color:var(--ink)} .btn:hover{background:var(--gold)}
+.hero-img{min-height:650px;background:
+linear-gradient(90deg,rgba(251,247,241,.08),rgba(251,247,241,0)),
+url("https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1400&q=85") center/cover}
+.section{padding:85px 0}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:32px}
+.section-head h2{font-family:"Cormorant Garamond";font-size:48px;margin:8px 0 0;font-weight:600}
+.section-head p{color:var(--muted);max-width:480px;line-height:1.7;font-size:14px}
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.cat{height:180px;position:relative;overflow:hidden;background:#eee}
+.cat img{width:100%;height:100%;object-fit:cover;transition:.5s}.cat:hover img{transform:scale(1.06)}
+.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.58))}
+.cat span{position:absolute;bottom:16px;left:15px;color:white;z-index:2;font-family:"Cormorant Garamond";font-size:24px}
+.feature{background:var(--rose);display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.feature-img{background:url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=85") center/cover}
+.feature-copy{padding:70px;display:flex;flex-direction:column;justify-content:center}.feature-copy h2{font-family:"Cormorant Garamond";font-size:58px;line-height:.95;margin:14px 0 20px}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.product{position:relative}.product-img{aspect-ratio:1/1;background:#f4efe8;overflow:hidden;position:relative}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:.45s}.product:hover img{transform:scale(1.04)}
+.wish{position:absolute;right:12px;top:12px;width:34px;height:34px;border:0;border-radius:50%;background:#fff;cursor:pointer;font-size:17px}
+.badge{position:absolute;left:12px;top:12px;background:#fff;padding:6px 9px;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.product h3{font-family:"Cormorant Garamond";font-size:23px;margin:13px 0 4px}.price{font-size:13px;color:var(--muted)}
+.banner{background:#201914;color:white;padding:58px 20px;text-align:center}.banner h2{font-family:"Cormorant Garamond";font-size:52px;margin:5px}.banner p{color:#d8cec4;font-size:13px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.trust-card{text-align:center;padding:25px;border-top:1px solid var(--line)}.trust-card b{font-family:"Cormorant Garamond";font-size:24px}.trust-card p{font-size:12px;color:var(--muted);line-height:1.6}
+.newsletter{background:var(--cream);text-align:center;padding:70px 20px}.newsletter h2{font-family:"Cormorant Garamond";font-size:48px;margin:0 0 10px}.form{display:flex;max-width:520px;margin:25px auto 0}.form input{flex:1;padding:16px;border:1px solid var(--line);background:white;outline:none}.form button{border:0;background:var(--ink);color:white;padding:0 25px;cursor:pointer}
+footer{background:#1e1815;color:#ded4ca;padding:55px 0 25px}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:45px}.footbrand{font-family:"Cormorant Garamond";font-size:34px;color:#fff}.footgrid h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.footgrid a{display:block;font-size:12px;margin:11px 0;color:#bdb2a8}.copyright{border-top:1px solid #443b35;margin-top:40px;padding-top:18px;font-size:11px;color:#8f847b}
+.toast{position:fixed;bottom:25px;right:25px;background:#201914;color:white;padding:14px 18px;font-size:12px;opacity:0;transform:translateY(12px);transition:.25s;z-index:50}.toast.show{opacity:1;transform:none}
+@media(max-width:900px){.navlinks{display:none}.hero{grid-template-columns:1fr}.hero-img{min-height:480px;order:-1}.categories{grid-template-columns:repeat(3,1fr)}.product-grid{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr}.feature-img{min-height:430px}.trust{grid-template-columns:repeat(2,1fr)}.footgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.hero-copy{padding:60px 25px}.hero-img{min-height:390px}.section{padding:60px 0}.categories{grid-template-columns:repeat(2,1fr)}.cat{height:150px}.section-head{display:block}.section-head h2{font-size:42px}.feature-copy{padding:45px 25px}.product-grid{gap:14px}.trust{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr}.form{display:block}.form input,.form button{width:100%;height:50px}.form button{margin-top:8px}}
+</style>
+</head>
+<body>
+<div class="topbar">COMPLIMENTARY SHIPPING ON ORDERS ABOVE ₹25,000 · BOOK A PRIVATE CONSULTATION</div>
+<nav>
+  <a class="logo" href="#">SRJ<span>JEWELLERY</span></a>
+  <div class="navlinks">
+    <a href="#new">New In</a><a href="#collections">Collections</a><a href="#gold">Gold</a><a href="#diamond">Diamonds</a><a href="#bridal">Bridal</a><a href="#about">Our Story</a>
+  </div>
+  <div class="navicons"><button class="icon" onclick="searchSite()" aria-label="Search">⌕</button><button class="icon" onclick="showToast('Wishlist opened')" aria-label="Wishlist">♡</button><button class="icon" onclick="showToast('Your bag is ready')">♧</button></div>
+</nav>
+
+<header class="hero" id="new">
+  <div class="hero-copy">
+    <div class="kicker">The new festive edit · 2026</div>
+    <h1>Made to<br><i>be remembered.</i></h1>
+    <p>Discover finely crafted gold and diamond jewellery designed for the moments that become part of your story. Modern silhouettes, Indian soul and timeless craftsmanship.</p>
+    <a class="btn" href="#collections">Explore the collection</a>
+  </div>
+  <div class="hero-img" aria-label="Luxury jewellery editorial image"></div>
+</header>
+
+<section class="section container" id="collections">
+  <div class="section-head"><div><div class="kicker">Explore SRJ</div><h2>Shop by category</h2></div><p>From everyday essentials to statement pieces, find jewellery for every mood, milestone and celebration.</p></div>
+  <div class="categories">
+    <a class="cat" href="#products"><img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80"><span>Earrings</span></a>
+    <a class="cat" href="#products"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=80"><span>Rings</span></a>
+    <a class="cat" href="#products"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80"><span>Necklaces</span></a>
+    <a class="cat" href="#products"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80"><span>Bangles</span></a>
+    <a class="cat" href="#products"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=80"><span>Bracelets</span></a>
+    <a class="cat" href="#bridal"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80"><span>Bridal</span></a>
+  </div>
+</section>
+
+<section class="container feature" id="bridal">
+  <div class="feature-img"></div>
+  <div class="feature-copy"><div class="kicker">Bridal 2026</div><h2>The wedding<br>edit</h2><p>Heritage-inspired gold, luminous diamonds and heirloom-worthy details for the beginning of something beautiful.</p><a class="btn" href="#products">Discover bridal</a></div>
+</section>
+
+<section class="section container" id="products">
+  <div class="section-head"><div><div class="kicker">Curated for you</div><h2>Signature pieces</h2></div><p>Elegant designs made to layer, gift and wear for years to come.</p></div>
+  <div class="product-grid">
+    <article class="product"><div class="product-img"><span class="badge">Bestseller</span><button class="wish" onclick="toggleWish(this)">♡</button><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85"></div><h3>Celeste Diamond Ring</h3><div class="price">18K Gold · ₹48,900</div></article>
+    <article class="product"><div class="product-img"><button class="wish" onclick="toggleWish(this)">♡</button><img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=85"></div><h3>Meera Drop Earrings</h3><div class="price">22K Gold · ₹36,500</div></article>
+    <article class="product"><div class="product-img"><span class="badge">New</span><button class="wish" onclick="toggleWish(this)">♡</button><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85"></div><h3>Amara Gold Necklace</h3><div class="price">22K Gold · ₹1,28,000</div></article>
+    <article class="product"><div class="product-img"><button class="wish" onclick="toggleWish(this)">♡</button><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85"></div><h3>Riwaa Heritage Bangle</h3><div class="price">22K Gold · ₹74,900</div></article>
+  </div>
+</section>
+
+<section class="banner" id="gold"><div class="kicker">SRJ Gold</div><h2>Pure gold. Personal meaning.</h2><p>22K and 18K gold designs crafted for everyday elegance and celebrations.</p><a class="btn light" href="#products">Shop gold</a></section>
+
+<section class="section container" id="diamond">
+  <div class="section-head"><div><div class="kicker">The SRJ promise</div><h2>Jewellery you can trust</h2></div><p>Thoughtful design, transparent pricing and care that continues long after your purchase.</p></div>
+  <div class="trust">
+    <div class="trust-card"><b>Certified</b><p>Authenticity and quality documentation with every eligible piece.</p></div>
+    <div class="trust-card"><b>Crafted with care</b><p>Detailed finishing inspired by India's rich jewellery traditions.</p></div>
+    <div class="trust-card"><b>Transparent</b><p>Clear product details, making charges and stone information.</p></div>
+    <div class="trust-card"><b>Lifetime care</b><p>Guidance for cleaning, maintenance and keeping your jewellery radiant.</p></div>
+  </div>
+</section>
+
+<section class="newsletter" id="about">
+  <div class="kicker">Stay in the know</div><h2>Join the SRJ circle</h2><p>New collections, private previews and styling inspiration — delivered occasionally.</p>
+  <form class="form" onsubmit="subscribe(event)"><input id="email" type="email" placeholder="Your email address" required><button>Subscribe</button></form>
+</section>
+
+<footer>
+<div class="container">
+  <div class="footgrid">
+    <div><div class="footbrand">SRJ Jewellery</div><p style="max-width:300px;line-height:1.8;font-size:12px;color:#a99e95">A contemporary Indian jewellery house celebrating timeless craftsmanship, meaningful occasions and modern elegance.</p></div>
+    <div><h4>Shop</h4><a href="#products">Gold</a><a href="#diamond">Diamonds</a><a href="#bridal">Bridal</a><a href="#collections">All Jewellery</a></div>
+    <div><h4>Help</h4><a href="#">Shipping & Returns</a><a href="#">Jewellery Care</a><a href="#">Size Guide</a><a href="#">Contact Us</a></div>
+    <div><h4>Visit</h4><a href="#">Find a Store</a><a href="#">Book Appointment</a><a href="#">WhatsApp Concierge</a><a href="#">Instagram</a></div>
+  </div>
+  <div class="copyright">© 2026 SRJ Jewellery. Demo storefront concept. Product names/prices are illustrative.</div>
+</div>
+</footer>
+<div class="toast" id="toast"></div>
+<script>
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+function toggleWish(btn){btn.textContent=btn.textContent==='♡'?'♥':'♡';showToast(btn.textContent==='♥'?'Added to wishlist':'Removed from wishlist')}
+function subscribe(e){e.preventDefault();showToast('Welcome to the SRJ circle ✦');e.target.reset()}
+function searchSite(){const q=prompt('What are you looking for?');if(q)showToast('Searching for “'+q+'”…')}
+</script>
+</body>
+</html>
